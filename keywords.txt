@@ -1,0 +1,73 @@
+#######################################
+# Syntax Coloring Map For wwFrankPin
+#######################################
+wwFrankPin	KEYWORD1
+
+SerialBT	KEYWORD1
+SerialESP	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+prepareFrank	KEYWORD2
+pinModeFrank	KEYWORD2
+digitalWriteFrank	KEYWORD2
+digitalReadFrank	KEYWORD2
+analogWriteFrank	KEYWORD2
+analogOutputFrank	KEYWORD2
+
+#######################################
+# Definition of NON  Arduino-Due Pins
+#######################################
+MiEnable	LITERAL1
+LiEnable	LITERAL1
+PB4	LITERAL1
+TeEnable	LITERAL1
+IrEnLeft	LITERAL1
+IrEnRight	LITERAL2
+WiProg	LITERAL1
+BtEnable	LITERAL1
+BtReset	LITERAL1
+GiEnable	LITERAL1
+
+#######################################
+# Definition of Arduino-Due Pins
+#######################################
+MoRiPwm	LITERAL1
+MoLePwm	LITERAL1
+Led13	LITERAL1
+WiRst	LITERAL1
+WiPin2	LITERAL1
+WiPin15	LITERAL1
+WiEnable	LITERAL1
+WiPin13	LITERAL1
+WiPin12	LITERAL1
+MFRight	LITERAL1
+NeoData	LITERAL1
+SdDetect	LITERAL1
+EnRight	LITERAL1
+EnLeft	LITERAL1
+GiInter	LITERAL1
+LedAux	LITERAL1
+VibSwitch	LITERAL1
+EnEnable	LITERAL1
+MoEnable	LITERAL1
+MoRi1	LITERAL1
+MoRi2	LITERAL1
+MFLeft	LITERAL1
+MoLe2	LITERAL1
+SpEnable	LITERAL1
+SpMute	LITERAL1
+MoLe1	LITERAL1
+SdCS	LITERAL1
+ShutDown	LITERAL1
+LiFront	LITERAL1
+IrLeft	LITERAL1
+IrRight	LITERAL1
+SysCur	LITERAL1
+SysVcc	LITERAL1
+RawVcc	LITERAL1
+MiInput	LITERAL1
+
+#######################################
+#######################################
