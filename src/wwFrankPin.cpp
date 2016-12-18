@@ -10,7 +10,6 @@
 #include "wwFrankPin.h"
 
 extern void prepareFrank() {
-
 	pinMode(SpEnable, OUTPUT);      // Audio Pin
 	digitalWrite(SpEnable, LOW);    // Audio off - disable amplifier
 
@@ -24,6 +23,9 @@ extern void prepareFrank() {
 	// man kann eine Brücke von BT Enable legen und dann diese LED frei benutzen...
 	//pinModeFrank(BtEnable, OUTPUT);    // Make the non DUE pin an output	
 	//digitalWriteFrank(BtEnable, HIGH); // HIGH = switch OFF the BT = energy saving	
+	
+  pinMode(SpOut, OUTPUT);         // switch the audio pin to output
+  digitalWrite(SpEnable, LOW);    // Audio amplifier off	
 }
 
 /*

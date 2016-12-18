@@ -3,6 +3,8 @@
 //    -( W-W )        www.wood-walker.org - Rainer Radow 
 //      - - - \          December 10, 2016 version 1.0
 // ****************************************************************************
+// Toggle Led13 and LedAux by pressing the right feeler of Woody
+
 #include <wwFrankPin.h>
 
 //=============================================================================
@@ -20,14 +22,14 @@ void setup()   {
 void loop() {
   // is one of the feeler pressed?
   if (digitalRead(MFRight) == 0) {
-    digitalWrite(Led13, HIGH); // turn Led13  on
-    digitalWrite(LedAux, LOW); // turn LedAUX off
-    delay(200);     // debounce the button
+    digitalWrite(Led13, HIGH);    // turn Led13  on
+    digitalWrite(LedAux, LOW);    // turn LedAUX off
+    delay(200);                   // debounce the button
   }
   if (digitalRead(MFLeft) == 0) {
     digitalWrite(Led13, LOW);
     digitalWrite(LedAux, HIGH);
-    delay(200);     // debounce the button
+    delay(200);                   // debounce the button
   }
 }
 // ****************************************************************************
