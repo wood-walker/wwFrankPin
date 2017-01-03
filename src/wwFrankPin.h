@@ -55,6 +55,7 @@ static const uint8_t MFLeft = 47;   //
 static const uint8_t MoLe2 = 48;    //
 static const uint8_t SpEnable = 49; //
 static const uint8_t SpMute = 73;	//
+static const uint8_t SpOut = DAC0;	//
 static const uint8_t MoLe1 = 50;	//
 static const uint8_t SdCS = 51;     //
 static const uint8_t ShutDown = 58; //
