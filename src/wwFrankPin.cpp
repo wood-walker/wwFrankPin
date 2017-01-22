@@ -10,8 +10,11 @@
 #include "wwFrankPin.h"
 
 extern void prepareFrank() {
+
 	pinMode(SpEnable, OUTPUT);      // Audio Pin
 	digitalWrite(SpEnable, LOW);    // Audio off - disable amplifier
+	pinModeFrank(SpMute, OUTPUT);      // audio mute pin
+	digitalWriteFrank(SpMute, LOW);    // amplifier no mute	
 
 	// ESP LED liegt am GPIO 14 des ESP und kann nur über den ESP gesteuert werden!	
 	pinMode(WiEnable, OUTPUT);
@@ -25,7 +28,8 @@ extern void prepareFrank() {
 	//digitalWriteFrank(BtEnable, HIGH); // HIGH = switch OFF the BT = energy saving	
 	
   pinMode(SpOut, OUTPUT);         // switch the audio pin to output
-  digitalWrite(SpEnable, LOW);    // Audio amplifier off	
+  digitalWrite(SpEnable, LOW);    // Audio amplifier off		
+	
 }
 
 /*
@@ -43,7 +47,8 @@ extern const PinDescription nonDuePinDescription[]= {
 	{PIOB, PIO_PB24, ID_PIOB, PIO_OUTPUT_0, PIO_DEFAULT, PIN_ATTR_DIGITAL, NO_ADC, NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER },  // 8 = BtEnable  = PB24
 	{PIOC, PIO_PC27, ID_PIOC, PIO_OUTPUT_0, PIO_DEFAULT, PIN_ATTR_DIGITAL, NO_ADC, NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER },  // 9 = BtReset   = PC27
 	{PIOB, PIO_PB5,  ID_PIOB, PIO_OUTPUT_0, PIO_DEFAULT, PIN_ATTR_DIGITAL, NO_ADC, NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER },  //10 = GiEnable  = PB5
-  // END
+	{PIOC, PIO_PC11, ID_PIOC, PIO_OUTPUT_0, PIO_DEFAULT, PIN_ATTR_DIGITAL, NO_ADC, NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER },  //11 = SpMute  = PC11     
+	// END
 	{NULL, 0, 0, PIO_NOT_A_PIN, PIO_DEFAULT, 0, NO_ADC, NO_ADC, NOT_ON_PWM, NOT_ON_TIMER }
 } ;
 

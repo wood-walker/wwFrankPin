@@ -2,7 +2,7 @@
 //      - - - /    wwFrankPin.h
 //    -( W-W )        CC Attribution 4.0 International License
 //      - - - \          www.wood-walker.org - Rainer Radow 
-//                          2016 December 09 - for Frankenstein DUE v0.7 and up
+//                          2017 Jan 21 - for Frankenstein DUE v0.7 and up
 // ***************************************************************************** 
 // This library defines the names for all the pins used for the Wood-Walker
 // It also establish functions to communicate with non Arduino DUE pins
@@ -16,10 +16,10 @@
 #define SerialESP     Serial3
 
 // Number of pins defined in PinDescription array
-#define PINS_C 11
+#define PINS_C 12
 // Definition of NONE Arduino-Due Pins ==========
 static const uint8_t MiEnable = 1;
-static const uint8_t LiEnable = 2;
+static const uint8_t LiEnable = 2;     //Enable the front light feeler
 static const uint8_t PB4 = 3;
 static const uint8_t TeEnable = 4;
 static const uint8_t IrEnLeft = 5;
@@ -28,6 +28,8 @@ static const uint8_t WiProg = 7;
 static const uint8_t BtEnable = 8;
 static const uint8_t BtReset = 9;
 static const uint8_t GiEnable = 10;
+static const uint8_t SpMute = 11;
+
 
 // Definition of Arduino-Due Pins ================
 static const uint8_t MoRiPwm = 11;  //
@@ -46,24 +48,26 @@ static const uint8_t EnRight = 34;  //
 static const uint8_t EnLeft = 35;   //
 static const uint8_t GiInter = 36;  //
 static const uint8_t LedAux = 37;   //
-static const uint8_t VibSwitch = 39;//
+static const uint8_t VibSwitch = 39; //
 static const uint8_t EnEnable = 40; //
+static const uint8_t LiBackEnable = 43; // PA 20 Enable the back light feeler
 static const uint8_t MoEnable = 44; //
 static const uint8_t MoRi1 = 45;    //
 static const uint8_t MoRi2 = 46;    //
 static const uint8_t MFLeft = 47;   //
 static const uint8_t MoLe2 = 48;    //
 static const uint8_t SpEnable = 49; //
-static const uint8_t SpMute = 73;	//
-static const uint8_t SpOut = DAC0;	//
+static const uint8_t SpOut = DAC0;    //
+static const uint8_t SpMuteV0 = 73;	//
 static const uint8_t MoLe1 = 50;	//
 static const uint8_t SdCS = 51;     //
+static const uint8_t UsbVcc = 55;   //
 static const uint8_t ShutDown = 58; //
-static const uint8_t LiFront = 59;  //
-static const uint8_t IrLeft = 60;   //
+static const uint8_t LiFront = 59;  //  PA4  Analog signal of the front light feeler
+static const uint8_t IrLeft = 60;   //   This is a problem with the 0.8 board
 static const uint8_t IrRight = 61;  //
 static const uint8_t SysCur = 62;   //
-static const uint8_t SysVcc = 63;   //
+static const uint8_t LiBack = 63;   // B18 Analog signal of the back light feeler
 static const uint8_t RawVcc = 64;   //  
 static const uint8_t MiInput = 65;  //
 
